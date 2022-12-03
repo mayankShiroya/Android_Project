@@ -6,24 +6,23 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
-public class MainActivity extends AppCompatActivity {
+public class signup extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_signup);
 
-        Button signupbtn = (Button) findViewById(R.id.signupBtn);
+        ImageButton backarrow = (ImageButton) findViewById(R.id.backarrow);
 
-        signupbtn.setOnClickListener(new View.OnClickListener() {
+        backarrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, signup.class);
+                Intent intent = new Intent(signup.this, MainActivity.class);
                 startActivity(intent);
             }
         });
-
-
     }
 }
